@@ -1,5 +1,5 @@
 {
-    "name": "swiftearnprime",
+    "name": "ot-swift-earnprime-back-end",
     "builds": [
       {
         "src": "server.js",
