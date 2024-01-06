@@ -104,12 +104,12 @@ exports.sandOtp = async (req, res, next) =>{
 
 exports.resendotp = async (req,res,next) => {
   try{
-    const otpCode = otpGenerator.generate(6, { digits: true, alphabets: false, upperCase: false, specialChars: false });
+    // const otpCode = otpGenerator.generate(6, { digits: true, alphabets: false, upperCase: false, specialChars: false });
     const userId = req.params.id
 
     const NewOtp = await User.findById(userId)
-    NewOtp.otp = otpCode
-    NewOtp.save()
+    // NewOtp.otp = otpCode
+    // NewOtp.save()
 
     const mailOptions ={
       from: process.env.USER,
