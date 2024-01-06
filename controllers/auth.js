@@ -113,19 +113,17 @@ exports.resendotp = async (req,res,next) => {
 
     const mailOptions ={
       from: process.env.USER,
-      to: newUser.email, 
+      to: NewOtp.email, 
       subject: "One-Time Password",
     html: `
-     <h4 style="font-size:25px;">Hi ${newUser.userName} !</h4> 
+     <h4 style="font-size:25px;">Hi ${NewOtp.userName} !</h4> 
 
-     <p>One-time password (OTP) to sign in to your account.</p>
+     <p>One-time password (OTP) to make a Withdraw.</p>
 
-     <h1 style="font-size:30px; color: red;"><b>${newUser.otp}</b></h1>
+     <h1 style="font-size:30px; color: red;"><b>${NewOtp.otp}</b></h1>
 
      <p>
      Swiftearnprime
-     </p> <br>
-     <p>swiftearnprime.org</p>
       `,
   }
 
