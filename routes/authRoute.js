@@ -17,6 +17,7 @@ Routers.route("/resetotp/:id").post(register.resendotp)
 Routers.route("/forgotpassword").post(register.forgotPassword)
 Routers.route("/sandOtp").post(register.sandOtp)
 Routers.route("/loginemail").post(register.loginEmail)
+Routers.route("/signupemailsand").post(register.signupEmailSand)
 Routers.route("/sendpayment/:id").post(register.sendPaymentInfo)
 
 module.exports = Routers
